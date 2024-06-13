@@ -55,8 +55,12 @@ public class GameController {
         saves = FXCollections.observableArrayList();
         saves.addAll(Database.getAllSaves());
 
-        if (saves.isEmpty())
+        if (saves.isEmpty()) {
             newSave();
+        }
+        else {
+            setData(saves.get(0));
+        }
 
         savesView.setItems(saves);
         savesView.setOnMouseClicked(this::onListViewClick);
