@@ -1,0 +1,26 @@
+.points-label {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
+
+.game-button {
+    -fx-padding: 10px;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-font-size: 16px;
+    -fx-text-alignment: center;
+}
+
+.click-button {
+    -fx-padding: 20px;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-font-size: 24px;
+    -fx-min-width: 100px;
+    -fx-min-height: 100px;
+}
+
+.cost-label {
+    -fx-font-size: 14px;
+    -fx-text-alignment: center;
+}

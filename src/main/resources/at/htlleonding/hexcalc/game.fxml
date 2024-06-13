@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<HBox fx:controller="at.htlleonding.hexcalc.controller.GameController"
-      xmlns:fx="http://javafx.com/fxml" spacing="20" alignment="center">
-   <padding>
-      <Insets top="20" right="20" bottom="20" left="20"/>
-   </padding>
-</HBox>
+<?import javafx.scene.control.ListView?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="at.htlleonding.hexcalc.controller.GameController">
+   <top>
+      <VBox alignment="CENTER" spacing="10.0">
+         <Label fx:id="pointsLabel" text="0 Points" styleClass="points-label"/>
+         <HBox alignment="CENTER" spacing="10.0">
+            <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0"/>
+            <Label fx:id="progressLabel" text="0"/>
+         </HBox>
+         <Label fx:id="statusLabel" />
+      </VBox>
+   </top>
+   <center>
+      <HBox alignment="CENTER" spacing="20.0">
+         <VBox alignment="CENTER" spacing="5.0">
+            <Button text="Upgrade" onAction="#onUpgrade" styleClass="game-button"/>
+            <Label fx:id="upgradeButtonCost" text="10 points" styleClass="cost-label"/>
+         </VBox>
+         <Button fx:id="clickButton" onAction="#onClick" text="+1" styleClass="click-button"/>
+         <VBox alignment="CENTER" spacing="5.0">
+            <Button text="Downgrade" onAction="#onDowngrade" styleClass="game-button"/>
+            <Label fx:id="downgradeButtonCost" text="-10 points" styleClass="cost-label"/>
+         </VBox>
+      </HBox>
+   </center>
+   <right>
+      <VBox>
+         <Label text="Saves"/>
+         <ListView fx:id="savesView" prefHeight="400.0" prefWidth="110.0" />
+         <Button text="New Save" onAction="#newSave" maxWidth="Infinity"/>
+         <Button text="Delete Save" onAction="#deleteSave" maxWidth="Infinity"/>
+      </VBox>
+   </right>
+</BorderPane>
