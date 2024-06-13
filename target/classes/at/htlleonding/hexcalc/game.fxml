@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:controller="at.htlleonding.hexcalc.controller.GameController"
+      xmlns:fx="http://javafx.com/fxml" spacing="20" alignment="center">
+   <padding>
+      <Insets top="20" right="20" bottom="20" left="20"/>
+   </padding>
+</HBox>
